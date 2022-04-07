@@ -9,6 +9,10 @@
     text-decoration: none;
 }
 
+.header span {
+    font-size: 1rem;
+}
+
 .header .logo {
     max-height: 32px;
 }
