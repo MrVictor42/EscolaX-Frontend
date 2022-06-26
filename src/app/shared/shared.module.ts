@@ -48,7 +48,24 @@ const DIRECTIVES: any[] = [DisableControlDirective];
 const PIPES: any[] = [SafeUrlPipe, ToObservablePipe];
 
 @NgModule({
-	imports: [...MODULES],
+	imports: [
+		CommonModule,
+		RouterModule,
+		ReactiveFormsModule,
+		FormsModule,
+		DragDropModule,
+		MaterialModule,
+		MaterialExtensionsModule,
+		FlexLayoutModule,
+		FormlyModule,
+		FormlyMaterialModule,
+		NgProgressModule,
+		NgProgressRouterModule,
+		NgProgressHttpModule,
+		NgxPermissionsModule,
+		ToastrModule,
+		TranslateModule
+	],
 	exports: [...MODULES, ...COMPONENTS, ...DIRECTIVES, ...PIPES],
 	declarations: [...COMPONENTS, ...COMPONENTS_DYNAMIC, ...DIRECTIVES, ...PIPES],
 })

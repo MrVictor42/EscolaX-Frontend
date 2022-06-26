@@ -8,15 +8,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { MaterialModule } from './material.module';
 import { LoginComponent } from './session/login/login.component';
-import { ErrorCodeComponent } from './shared/components/error-code/error-code.component';
-import { BreadcrumbComponent } from './shared/components/breadcrumb/breadcrumb.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-  LoginComponent,
-  ErrorCodeComponent,
-  BreadcrumbComponent,
+		LoginComponent
 	],
 	imports: [
 		BrowserModule,
