@@ -7,12 +7,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MaterialModule } from './material.module';
-import { LoginComponent } from './auth/login/login.component';
+import { LoginComponent } from './session/login/login.component';
+import { ErrorCodeComponent } from './shared/components/error-code/error-code.component';
+import { BreadcrumbComponent } from './shared/components/breadcrumb/breadcrumb.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		LoginComponent
+  LoginComponent,
+  ErrorCodeComponent,
+  BreadcrumbComponent,
 	],
 	imports: [
 		BrowserModule,
@@ -24,4 +28,6 @@ import { LoginComponent } from './auth/login/login.component';
 	providers: [],
 	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}
