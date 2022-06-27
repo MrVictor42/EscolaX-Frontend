@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "escola-x-frontend": {
+    "escola-x": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -40,7 +40,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/escola-x-frontend",
+            "outputPath": "dist/escola-x",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -92,10 +92,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "escola-x-frontend:build:production"
+              "browserTarget": "escola-x:build:production"
             },
             "development": {
-              "browserTarget": "escola-x-frontend:build:development"
+              "browserTarget": "escola-x:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -103,13 +103,13 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "escola-x-frontend:build"
+            "browserTarget": "escola-x:build"
           }
         }
       }
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "8fb250ae-f438-44f8-a186-921259de5384"
   }
 }
