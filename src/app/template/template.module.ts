@@ -10,6 +10,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { UserPanelComponent } from './sidebar/user-panel.component';
 import { SidebarNoticeComponent } from './sidebar-notice/sidebar-notice.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
+import { AccordionDirective } from './sidemenu/accordion.directive';
+import { AccordionItemDirective } from './sidemenu/accordionItem.directive';
+import { AccordionAnchorDirective } from './sidemenu/accordionanchor.directive';
 
 @NgModule({
 	declarations: [
@@ -21,7 +24,10 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
 		SidebarComponent,
 		UserPanelComponent,
 		SidebarNoticeComponent,
-		SidemenuComponent
+		SidemenuComponent,
+		AccordionDirective,
+		AccordionItemDirective,
+		AccordionAnchorDirective
 	],
 	imports: [
 		SharedModule
