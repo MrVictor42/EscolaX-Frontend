@@ -134,6 +134,8 @@ export class AdminLayoutComponent implements OnInit {
 		this.settings.setOptions(this.options);
 	}
 
+	// Demo purposes only
+
 	receiveOptions(options: AppSettings): void {
 		this.options = options;
 		this.toggleDarkTheme(options);

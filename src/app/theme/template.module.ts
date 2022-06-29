@@ -2,7 +2,6 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { SharedModule } from '../core/shared/shared.module';
 import { HeaderComponent } from '../theme/header/header.component';
-import { LayoutComponent } from '../theme/layout/layout.component';
 import { BrandingComponent } from '../theme/widgets/branding.component';
 import { GithubButtonComponent } from './widgets/github.component';
 import { NotificationComponent } from './widgets/notification.component';
@@ -21,7 +20,6 @@ import { TopmenuPanelComponent } from './topmenu/topmenu-panel.component';
 
 @NgModule({
 	declarations: [
-		LayoutComponent,
 		HeaderComponent,
 		BrandingComponent,
 		GithubButtonComponent,
