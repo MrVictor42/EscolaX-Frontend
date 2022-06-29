@@ -1,9 +1,9 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { SharedModule } from '../core/shared/shared.module';
-import { HeaderComponent } from '../template/header/header.component';
-import { LayoutComponent } from '../template/layout/layout.component';
-import { BrandingComponent } from '../template/widgets/branding.component';
+import { HeaderComponent } from '../theme/header/header.component';
+import { LayoutComponent } from '../theme/layout/layout.component';
+import { BrandingComponent } from '../theme/widgets/branding.component';
 import { GithubButtonComponent } from './widgets/github.component';
 import { NotificationComponent } from './widgets/notification.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -13,6 +13,11 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { AccordionDirective } from './sidemenu/accordion.directive';
 import { AccordionItemDirective } from './sidemenu/accordionItem.directive';
 import { AccordionAnchorDirective } from './sidemenu/accordionanchor.directive';
+import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
+import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
+import { CustomizerComponent } from './customizer/customizer.component';
+import { TopmenuComponent } from './topmenu/topmenu.component';
+import { TopmenuPanelComponent } from './topmenu/topmenu-panel.component';
 
 @NgModule({
 	declarations: [
@@ -27,14 +32,20 @@ import { AccordionAnchorDirective } from './sidemenu/accordionanchor.directive';
 		SidemenuComponent,
 		AccordionDirective,
 		AccordionItemDirective,
-		AccordionAnchorDirective
+		AccordionAnchorDirective,
+		AdminLayoutComponent,
+		AuthLayoutComponent,
+		CustomizerComponent,
+		TopmenuComponent,
+		TopmenuPanelComponent
 	],
 	imports: [
 		SharedModule
 	],
-	exports: [LayoutComponent],
+	exports: [AdminLayoutComponent],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
+
 export class TemplateModule {
 
 }

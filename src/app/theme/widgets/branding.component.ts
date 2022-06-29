@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 	selector: 'app-branding',
 	template: `
 		<a class="matero-branding" href="/">
-			<img src="./assets/images/logo.png" class="matero-branding-logo-expanded" alt="escolax-logo" />
+			<img src="./assets/images/matero.png" class="matero-branding-logo-expanded" alt="escolax-logo" />
 			<span class="matero-branding-name">Escola X</span>
 		</a>
   `,

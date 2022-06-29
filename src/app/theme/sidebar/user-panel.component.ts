@@ -27,7 +27,7 @@ import { Router } from '@angular/router';
 export class UserPanelComponent implements OnInit {
 
 	ngOnInit(): void {
-		
+
 	}
 	// user!: User;
 
