@@ -1,12 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { PreloaderService } from './core/bootstrap/preloader.service';
 
 @Component({
 	selector: 'app-root',
-	templateUrl: 'app.component.html',
+	template: '<router-outlet></router-outlet>',
 	styles: [
 
 	]
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
 
+	constructor(private preloader: PreloaderService) { }
+
+	ngOnInit() { }
+
+	ngAfterViewInit() {
+		this.preloader.hide();
+	}
 }

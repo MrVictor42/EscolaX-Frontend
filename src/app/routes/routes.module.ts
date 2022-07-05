@@ -7,11 +7,12 @@ import { HomeComponent } from './home/home.component';
 
 const COMPONENTS: any[] = [
 	LoginComponent,
+	HomeComponent
 ];
 const COMPONENTS_DYNAMIC: any[] = [];
 
 @NgModule({
 	imports: [SharedModule, RoutesRoutingModule],
-	declarations: [...COMPONENTS, ...COMPONENTS_DYNAMIC, HomeComponent],
+	declarations: [...COMPONENTS, ...COMPONENTS_DYNAMIC],
 })
 export class RoutesModule { }

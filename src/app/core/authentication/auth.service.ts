@@ -59,6 +59,7 @@ export class AuthService {
 		const headers = {
 			"Content-Type" : "application/x-www-form-urlencoded"
 		};
+		console.log(params.toString())
 
 		return this.http.post(this.loginBase, params.toString(), { headers });
 	}

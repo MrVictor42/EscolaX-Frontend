@@ -40,7 +40,6 @@ import { TopmenuPanelComponent } from './topmenu/topmenu-panel.component';
 	imports: [
 		SharedModule
 	],
-	exports: [AdminLayoutComponent],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 

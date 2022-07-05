@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
 
 import { environment } from '../../environments/environment';
 import { AuthGuard } from '../core/authentication/auth.guard';
@@ -36,7 +35,6 @@ const routes: Routes = [
             useHash: environment.useHash,
             relativeLinkResolution: 'legacy',
         }),
-        HttpClientModule
     ],
     exports: [RouterModule],
 })
