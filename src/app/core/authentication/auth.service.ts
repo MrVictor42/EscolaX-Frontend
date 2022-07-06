@@ -37,7 +37,7 @@ export class AuthService {
 		const token = this.getToken();
 
 		if(token) {
-			const user = this.jwtHelper.decodeToken(token).username;
+			const user = this.jwtHelper.decodeToken(token);
 			return user;
 		} else {
 			return null;
@@ -59,7 +59,6 @@ export class AuthService {
 		const headers = {
 			"Content-Type" : "application/x-www-form-urlencoded"
 		};
-		console.log(params.toString())
 
 		return this.http.post(this.loginBase, params.toString(), { headers });
 	}

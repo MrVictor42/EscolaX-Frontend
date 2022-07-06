@@ -1,43 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { AuthService, User } from '@core/authentication';
+import { User } from 'src/app/model/user';
+import { AuthService } from 'src/app/core/authentication';
 
 @Component({
 	selector: 'app-user-panel',
-	template: `
-    <div class="matero-user-panel" fxLayout="column" fxLayoutAlign="center center">
-      <!-- <img class="matero-user-panel-avatar" {{ user.avatar === null ? src="./assets/images/logo.png" : [src]="user.avatar" }} alt="avatar" width="64" /> -->
-      <h4 class="matero-user-panel-name">Victor</h4>
-      <h5 class="matero-user-panel-email">Victor</h5>
-      <div class="matero-user-panel-icons">
-        <a routerLink="/profile/overview" mat-icon-button>
-          <mat-icon class="icon-18">account_circle</mat-icon>
-        </a>
-        <a routerLink="/profile/settings" mat-icon-button>
-          <mat-icon class="icon-18">settings</mat-icon>
-        </a>
-        <!-- <a (click)="logout()" mat-icon-button>
-          <mat-icon class="icon-18">exit_to_app</mat-icon>
-        </a> -->
-      </div>
-    </div>
-  `,
+	templateUrl: 'user-panel.component.html',
 	styleUrls: ['./user-panel.component.scss'],
 })
 export class UserPanelComponent implements OnInit {
 
-	ngOnInit(): void {
+	user: User = new User();
+
+	constructor(private authService : AuthService, private router: Router) {
 
 	}
-	// user!: User;
 
-	// constructor(private router: Router, private auth: AuthService) { }
+	ngOnInit(): void {
+		this.user = this.authService.getAuthenticatedUser();
+		console.log(this.user)
+	}
 
-	// ngOnInit(): void {
-	// 	this.auth.user().subscribe(user => (this.user = user));
-	// }
-
-	// logout() {
-	// 	this.auth.logout().subscribe(() => this.router.navigateByUrl('/auth/login'));
-	// }
+	logout() {
+		this.authService.logout();
+		this.router.navigateByUrl('/auth/login');
+	}
 }

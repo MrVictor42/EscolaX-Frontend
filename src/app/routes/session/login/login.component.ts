@@ -39,6 +39,13 @@ export class LoginComponent implements OnInit {
 	onSubmit() {
 		this.isSubmitting = true;
 
-		this.authService.login(this.username!!.value!!, this.password!!.value!!)
+		this.authService.login(this.username!!.value!!, this.password!!.value!!).subscribe(response => {
+			const access_token = JSON.stringify(response);
+			localStorage.setItem("access_token", access_token);
+			this.router.navigate(['/home'])
+		}, erroResponse => {
+			alert("NÃO AUTENTICADO")
+			this.isSubmitting = false;
+		});
 	}
 }
