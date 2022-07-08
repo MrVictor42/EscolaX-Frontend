@@ -28,8 +28,8 @@
 		"password": "Senha",
 		"remember_me": "Remember Me",
 		"login": "Login",
-		"forget_password": "Forgot password",
-		"change_password": "Click here to change",
+		"forget_password": "Esqueceu Sua Senha?",
+		"change_password": "Clique Aqui Para Trocar!",
 		"have_no_account": "Don't have an account",
 		"create_one": "Click here to create one",
 		"please_enter": "Please enter"

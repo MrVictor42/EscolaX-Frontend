@@ -17,6 +17,7 @@ import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { CustomizerComponent } from './customizer/customizer.component';
 import { TopmenuComponent } from './topmenu/topmenu.component';
 import { TopmenuPanelComponent } from './topmenu/topmenu-panel.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
 	declarations: [
@@ -37,7 +38,7 @@ import { TopmenuPanelComponent } from './topmenu/topmenu-panel.component';
 		TopmenuComponent,
 		TopmenuPanelComponent,
 	],
-	imports: [ SharedModule],
+	imports: [SharedModule],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
