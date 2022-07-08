@@ -15,4 +15,7 @@ const COMPONENTS_DYNAMIC: any[] = [];
 	imports: [SharedModule, RoutesRoutingModule],
 	declarations: [...COMPONENTS, ...COMPONENTS_DYNAMIC],
 })
-export class RoutesModule { }
+
+export class RoutesModule {
+
+}

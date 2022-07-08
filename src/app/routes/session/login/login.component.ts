@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HttpErrorResponse } from '@angular/common/http';
-import { filter } from 'rxjs/operators';
 import { AuthService } from '../../../core/authentication/auth.service';
 
 @Component({
@@ -36,7 +34,7 @@ export class LoginComponent implements OnInit {
 		return this.loginForm.get('password');
 	}
 
-	onSubmit() {
+	onSubmit() : void {
 		this.isSubmitting = true;
 
 		this.authService.login(this.username!!.value!!, this.password!!.value!!).subscribe(response => {
@@ -44,8 +42,8 @@ export class LoginComponent implements OnInit {
 			localStorage.setItem("access_token", access_token);
 			this.router.navigate(['/home'])
 		}, erroResponse => {
-			alert("NÃO AUTENTICADO")
 			this.isSubmitting = false;
+			console.log(erroResponse);
 		});
 	}
 }
