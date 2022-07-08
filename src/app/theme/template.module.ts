@@ -35,11 +35,9 @@ import { TopmenuPanelComponent } from './topmenu/topmenu-panel.component';
 		AuthLayoutComponent,
 		CustomizerComponent,
 		TopmenuComponent,
-		TopmenuPanelComponent
+		TopmenuPanelComponent,
 	],
-	imports: [
-		SharedModule
-	],
+	imports: [ SharedModule],
 	schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 

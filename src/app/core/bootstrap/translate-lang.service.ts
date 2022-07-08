@@ -7,10 +7,7 @@ import { SettingsService } from './settings.service';
 	providedIn: 'root',
 })
 export class TranslateLangService {
-	constructor(
-		private injector: Injector,
-		private translate: TranslateService,
-		private settings: SettingsService
+	constructor(private injector: Injector, private translate: TranslateService, private settings: SettingsService
 	) { }
 
 	load() {
@@ -18,10 +15,11 @@ export class TranslateLangService {
 			const locationInitialized = this.injector.get(LOCATION_INITIALIZED, Promise.resolve());
 			locationInitialized.then(() => {
 				const browserLang = navigator.language;
-				const defaultLang = browserLang.match(/en-US|zh-CN|zh-TW/) ? browserLang : 'en-US';
+				const defaultLang = browserLang.match(/pt-BR | en-US/) ? browserLang : 'pt-BR';
 
 				this.settings.setLanguage(defaultLang);
 				this.translate.setDefaultLang(defaultLang);
+				this.getCurrentLanguage();
 				this.translate.use(defaultLang).subscribe(
 					() => console.log(`Successfully initialized '${defaultLang}' language.'`),
 					() => console.error(`Problem with '${defaultLang}' language initialization.'`),
@@ -29,5 +27,9 @@ export class TranslateLangService {
 				);
 			});
 		});
+	}
+
+	getCurrentLanguage() : string {
+		return this.translate.currentLang;
 	}
 }
