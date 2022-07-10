@@ -6,7 +6,7 @@ import { AuthGuard } from '../core/authentication/auth.guard';
 import { AdminLayoutComponent } from '../theme/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from '../theme/auth-layout/auth-layout.component';
 import { HomeComponent } from './home/home.component';
-import { ResetPasswordComponent } from './profile/reset-password/reset-password.component';
+import { ResetPasswordComponent } from '../theme/reset-password/reset-password.component';
 import { LoginComponent } from './session/login/login.component';
 
 const routes: Routes = [
@@ -32,7 +32,7 @@ const routes: Routes = [
             { path: 'reset-password', component: ResetPasswordComponent }
         ]
     },
-    { path: '**', redirectTo: 'home' },
+    { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({

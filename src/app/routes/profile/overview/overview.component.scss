@@ -1,0 +1,11 @@
+.mat-form-field-appearance-legacy {
+    font-size: 18px;
+}
+
+::ng-deep .mat-form-field-underline {
+    display: none;
+}
+
+.mat-input-element:disabled {
+    color: black!important;
+}

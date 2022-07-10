@@ -41,7 +41,6 @@ export class AlertComponent implements OnInit, OnDestroy {
 			}
 			);
 
-		// clear alerts on location change
 		this.routeSubscription = this.router.events.subscribe(event => {
 			if (event instanceof NavigationStart) {
 				this.alertService.clear(this.id);
@@ -50,7 +49,6 @@ export class AlertComponent implements OnInit, OnDestroy {
 	}
 
 	ngOnDestroy() {
-		// unsubscribe to avoid memory leaks
 		this.alertSubscription.unsubscribe();
 		this.routeSubscription.unsubscribe();
 	}

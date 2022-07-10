@@ -24,7 +24,6 @@ import { ToObservablePipe } from './pipes/to-observable.pipe';
 
 const MODULES: any[] = [
 	MaterialModule,
-	BrowserModule,
 	CommonModule,
 	RouterModule,
 	ReactiveFormsModule,

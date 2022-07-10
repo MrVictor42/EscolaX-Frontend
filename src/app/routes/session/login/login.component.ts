@@ -15,7 +15,6 @@ export class LoginComponent implements OnInit {
 	isSubmitting = false;
 	school: string = "Escola X";
 	currentLanguage: string = "";
-	errors: string[] = [];
 
 	loginForm = this.fb.group({
 		username: ['', [Validators.required]],
@@ -23,7 +22,8 @@ export class LoginComponent implements OnInit {
 	});
 
 	constructor(private fb: FormBuilder, private router: Router,
-		private authService: AuthService, private language: TranslateLangService, private alertService: AlertService) {
+		private authService: AuthService, private language: TranslateLangService, 
+		private alertService: AlertService) {
 	}
 
 	ngOnInit(): void {
@@ -38,6 +38,8 @@ export class LoginComponent implements OnInit {
 		return this.loginForm.get('password');
 	}
 
+	message : string[] = [];
+
 	onSubmit(): void {
 		this.isSubmitting = true;
 		this.alertService.clear();
@@ -45,14 +47,13 @@ export class LoginComponent implements OnInit {
 		this.authService.login(this.username!!.value!!, this.password!!.value!!).subscribe(response => {
 			const access_token = JSON.stringify(response);
 			localStorage.setItem("access_token", access_token);
-			this.router.navigate(['/home'])
+			this.router.navigate(['/home']);
 		}, erroResponse => {
 			this.isSubmitting = false;
 			if (this.language.getCurrentLanguage() == "pt-BR") {
 				this.displayError("Usuário e/ou senha incorreto(s).");
-				this.errors = ["Usuário e/ou senha incorreto(s)."];
 			} else {
-				this.errors = ["The username or password you entered is incorrect."];
+				this.displayError("The username or password you entered is incorrect.");
 			}
 		});
 	}
@@ -63,8 +64,8 @@ export class LoginComponent implements OnInit {
 		);
 	}
 
-	private displaySuccess() {
-		this.alertService.success("Profile photo successfully uploaded!",
+	private displaySuccess(message: string) {
+		this.alertService.success(message,
 			{ autoClose: false }
 		);
 	}

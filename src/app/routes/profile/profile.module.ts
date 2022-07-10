@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
 import { SharedModule } from '../../core/shared';
 import { ProfileRoutingModule } from './profile-routing.module';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { ProfileLayoutComponent } from './layout/layout.component';
+import { ProfileOverviewComponent } from './overview/overview.component';
+import { ProfileSettingsComponent } from './settings/settings.component';
+import { ProfileResetPasswordComponent } from './reset-password/reset-password.component';
 
 const COMPONENTS: any[] = [
 	ProfileLayoutComponent,
-	ResetPasswordComponent
+	ProfileOverviewComponent,
+	ProfileSettingsComponent,
+	ProfileResetPasswordComponent
 ];
 const COMPONENTS_DYNAMIC: any[] = [];
 

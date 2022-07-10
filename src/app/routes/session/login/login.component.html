@@ -10,11 +10,7 @@
                 <input matInput placeholder="{{'login.username' | translate}}" formControlName="username" required>
                 <mat-error *ngIf="username?.invalid">
                     <span *ngIf="username?.errors?.required">
-                        {{'login.please_enter' | translate}} <strong>ERRO</strong>
-                    </span>
-
-                    <span *ngIf="username?.errors?.remote">
-                        {{ username?.errors?.remote }}
+                        <strong>{{'login.username.required' | translate}}</strong>
                     </span>
                 </mat-error>
             </mat-form-field>
@@ -25,11 +21,7 @@
                     formControlName="password" required>
                 <mat-error *ngIf="password?.invalid">
                     <span *ngIf="password?.errors?.required">
-                        {{'login.please_enter' | translate}} <strong>ERRO</strong>
-                    </span>
-
-                    <span *ngIf="password?.errors?.remote">
-                        {{ password?.errors?.remote }}
+                        <strong>{{'login.password.required' | translate}}</strong>
                     </span>
                 </mat-error>
             </mat-form-field>

@@ -26,21 +26,19 @@
 		"title": "Bem vindo a ",
 		"username": "Usuário",
 		"password": "Senha",
-		"remember_me": "Remember Me",
+		"username.required": "Usuário Obrigatório",
+		"password.required": "Senha Obrigatória",
 		"login": "Login",
 		"forget_password": "Esqueceu Sua Senha?",
-		"change_password": "Clique Aqui Para Trocar!",
-		"have_no_account": "Don't have an account",
-		"create_one": "Click here to create one",
-		"please_enter": "Please enter"
+		"change_password": "Clique Aqui Para Trocar!"
 	},
-	"register": {
-		"welcome": "Welcome",
-		"title": "It only takes a few seconds to create your account",
-		"confirm_password": "Confirm Password",
-		"agree": "I have read and agree to the terms of service",
-		"have_an_account": "Already have an account",
-		"register": "Create account"
+	"profile": {
+		"title" : "Perfil",
+		"overview": "Resumo",
+		"settings": "Editar Perfil",
+		"reset-password": "Trocar Senha",
+		"informations": "Informações",
+		"informations_about" : "Informações Sobre"
 	},
 	"paginator": {
 		"items_per_page_label": "Items per page:",

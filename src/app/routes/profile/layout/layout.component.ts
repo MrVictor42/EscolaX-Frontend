@@ -16,6 +16,6 @@ export class ProfileLayoutComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-
+		this.user = this.authService.getAuthenticatedUser();
 	}
 }
