@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../../core/authentication';
-import { User } from '../../../model/user';
 
 @Component({
 	selector: 'app-layout',
@@ -9,13 +7,11 @@ import { User } from '../../../model/user';
 })
 export class ProfileLayoutComponent implements OnInit {
 
-	user: User = new User();
-
-	constructor(private authService : AuthService) {
+	constructor() {
 
 	}
 
 	ngOnInit(): void {
-		this.user = this.authService.getAuthenticatedUser();
+
 	}
 }

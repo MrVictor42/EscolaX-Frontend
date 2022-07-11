@@ -26,6 +26,9 @@
 		"title": "Bem vindo a ",
 		"username": "Usuário",
 		"password": "Senha",
+		"email": "Email",
+		"name": "Nome",
+		"permisson": "Permissão",
 		"username.required": "Usuário Obrigatório",
 		"password.required": "Senha Obrigatória",
 		"login": "Login",
@@ -35,7 +38,7 @@
 	"profile": {
 		"title" : "Perfil",
 		"overview": "Resumo",
-		"settings": "Editar Perfil",
+		"edit": "Editar Perfil",
 		"reset-password": "Trocar Senha",
 		"informations": "Informações",
 		"informations_about" : "Informações Sobre"

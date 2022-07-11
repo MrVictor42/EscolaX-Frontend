@@ -39,7 +39,7 @@ const routes: Routes = [
     imports: [
         RouterModule.forRoot(routes, {
             useHash: environment.useHash,
-            relativeLinkResolution: 'legacy',
+            relativeLinkResolution: 'legacy'
         }),
     ],
     exports: [RouterModule],
