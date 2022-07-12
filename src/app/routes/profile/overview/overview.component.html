@@ -5,14 +5,14 @@
                 <mat-icon>account_circle</mat-icon>
                 {{'profile.informations' | translate}}
             </ng-template>
-            <app-informations></app-informations>
+            <app-informations [user]="user"></app-informations>
         </mat-tab>
         <mat-tab>
             <ng-template mat-tab-label>
                 <mat-icon>edit</mat-icon>
                 {{'profile.edit' | translate}}
             </ng-template>
-            <app-edit-profile></app-edit-profile>
+            <app-edit-profile [user]="user"></app-edit-profile>
         </mat-tab>
         <mat-tab>
             <ng-template mat-tab-label>

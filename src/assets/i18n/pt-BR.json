@@ -31,6 +31,7 @@
 		"permisson": "Permissão",
 		"username.required": "Usuário Obrigatório",
 		"password.required": "Senha Obrigatória",
+		"avatar": "foto",
 		"login": "Login",
 		"forget_password": "Esqueceu Sua Senha?",
 		"change_password": "Clique Aqui Para Trocar!"
@@ -41,7 +42,8 @@
 		"edit": "Editar Perfil",
 		"reset-password": "Trocar Senha",
 		"informations": "Informações",
-		"informations_about" : "Informações Sobre"
+		"informations_about" : "Informações Sobre",
+		"save": "Salvar"
 	},
 	"paginator": {
 		"items_per_page_label": "Items per page:",

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../../core/authentication';
 import { User } from '../../../core/authentication';
 
@@ -9,7 +9,7 @@ import { User } from '../../../core/authentication';
 })
 export class ProfileOverviewComponent implements OnInit {
 	
-	@Input() user: User = new User();
+	user: User = new User();
 
 	constructor(private authService: AuthService) {
 

@@ -1,4 +1,4 @@
-<form class="m-16 form-field-full">
+<form #loginForm="ngForm" class="m-16 form-field-full">
     <div fxLayout="row wrap" fxLayoutGap="8px grid">
 
         <div fxFlex="50" fxFlex.lt-md="100">
@@ -8,24 +8,25 @@
             </mat-form-field>
         </div>
 
+
         <div fxFlex="50" fxFlex.lt-md="100">
             <mat-form-field>
                 <mat-label>{{'login.email' | translate}}</mat-label>
-                <input matInput value="{{ user.email }}" disabled>
+                <input matInput value="{{ user.email }}" name="email" [(ngModel)]="user.email" disabled>
             </mat-form-field>
         </div>
 
         <div fxFlex="50" fxFlex.lt-md="100">
             <mat-form-field>
                 <mat-label>{{'login.name' | translate}}</mat-label>
-                <input matInput value="{{ user.name }}" disabled>
+                <input matInput value="{{ user.name }}" name="name" [(ngModel)]="user.name" disabled>
             </mat-form-field>
         </div>
 
         <div fxFlex="50" fxFlex.lt-md="100">
             <mat-form-field>
                 <mat-label>{{'login.permisson' | translate}}</mat-label>
-                <input matInput value="{{ user.roles }}" disabled>
+                <input matInput value="{{ user.roles }}" name="roles" [(ngModel)]="user.roles" disabled>
             </mat-form-field>
         </div>
     </div>

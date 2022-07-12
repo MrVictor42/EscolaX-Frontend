@@ -63,6 +63,10 @@ export class AuthService {
 		return this.http.post(this.loginBase, params.toString(), { headers });
 	}
 
+	update() {
+		
+	}
+
 	changePasswordNoAuthenticated(username : string) : void {
 		alert("não autenticado")
 	}
