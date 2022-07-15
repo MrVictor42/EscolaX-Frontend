@@ -10,7 +10,6 @@ import { environment } from '../../../environments/environment';
 })
 export class AuthService {
 	
-	userBaseAPI : string = environment.apiURL + 'user';
 	loginBase : string = environment.apiURL + 'login';
 	jwtHelper : JwtHelperService = new JwtHelperService();
 
@@ -61,10 +60,6 @@ export class AuthService {
 		};
 
 		return this.http.post(this.loginBase, params.toString(), { headers });
-	}
-
-	update() {
-		
 	}
 
 	changePasswordNoAuthenticated(username : string) : void {

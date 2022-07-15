@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserService } from '../../../model/user.service';
 
-import { AuthService, User } from '../../../core/authentication';
+import { User } from '../../../core/authentication';
 
 @Component({
 	selector: 'app-edit-profile',
@@ -15,7 +16,7 @@ export class ProfileEditComponent implements OnInit {
 	isNull: boolean = false;
 	eventSelected: any;
 
-	constructor(private authService: AuthService, private snackbar: MatSnackBar) {
+	constructor(private userService: UserService, private snackbar: MatSnackBar) {
 
 	}
 
@@ -24,15 +25,28 @@ export class ProfileEditComponent implements OnInit {
 	}
 
 	onSubmit(user: User) {
+
+		const objectUser : Object = {
+			id: user.id,
+			username: user.username,
+			password: user.password,
+			name : user.name,
+			email: user.email
+		}
+
 		if (this.eventSelected != null) {
 			const formData: FormData = new FormData();
 			const target = this.eventSelected.target.files;
 			const avatar = target.item(0);
 
-			formData.append('avatar', avatar)
+			formData.append('avatar', avatar);
 
-			formData.forEach((value, key) => {
-				console.log(key + " " + value)
+			this.userService.update(objectUser, formData).subscribe(response => {
+				this.snackbar.open("Informações Atualizadas Com Sucesso!", "");
+			});
+		} else {
+			this.userService.update(objectUser, undefined).subscribe(response => {
+				this.snackbar.open("Informações Atualizadas Com Sucesso!", "");
 			});
 		}
 	}
