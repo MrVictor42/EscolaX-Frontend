@@ -1,6 +1,6 @@
 <div class="matero-user-panel" fxLayout="column" fxLayoutAlign="center center">
-    <img class="matero-user-panel-avatar" *ngIf="user.avatar != ''" src="data:image/png;base64,{{ user.avatar }}" />
-    <img class="matero-user-panel-avatar" *ngIf="user.avatar == ''" src='../../../assets/images/avatar.jpg' />
+    <img class="matero-user-panel-avatar" *ngIf="user.photo != null" src="data:image/png;base64,{{ user.photo }}" />
+    <img class="matero-user-panel-avatar" *ngIf="user.photo == null" src='../../../assets/images/avatar.jpg' />
     <h4 class="matero-user-panel-name">{{ user.name }}</h4>
     <h5 class="matero-user-panel-email">{{ user.email }}</h5>
     <div class="matero-user-panel-icons">

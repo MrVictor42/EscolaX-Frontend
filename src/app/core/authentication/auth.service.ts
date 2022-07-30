@@ -2,6 +2,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { Observable } from 'rxjs';
+import { User } from '.';
 
 import { environment } from '../../../environments/environment';
 
@@ -11,6 +12,7 @@ import { environment } from '../../../environments/environment';
 export class AuthService {
 	
 	loginBase : string = environment.apiURL + 'login';
+	userBase : string = environment.apiURL + 'user';
 	jwtHelper : JwtHelperService = new JwtHelperService();
 
 	constructor(private http : HttpClient) {
@@ -32,14 +34,14 @@ export class AuthService {
 		}
 	}
 
-	getAuthenticatedUser() : any {
+	getAuthenticatedUser() : Observable<User> {
 		const token = this.getToken();
 
 		if(token) {
-			const user = this.jwtHelper.decodeToken(token);
-			return user;
+			const tokenDecode = this.jwtHelper.decodeToken(token);
+			return this.http.get(`${ this.userBase }/current_user?username=${ tokenDecode.username }`)
 		} else {
-			return null;
+			return null!!;
 		}
 	}
 

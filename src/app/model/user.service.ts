@@ -23,10 +23,10 @@ export class UserService {
 	update(user: User, formData : FormData | undefined): Observable<any> {
 
 		if(formData == undefined) {
-			return this.http.put<User>(`${this.userBaseAPI}/update`, user);
+			return this.http.put(`${this.userBaseAPI}/update`, user);
 		} else {
 			this.http.put<User>(`${this.userBaseAPI}/update`, user);
-			return this.http.put(`${this.userBaseAPI}/update/photo/${ user.id }`, formData, { responseType: 'blob' });
+			return this.http.put(`${this.userBaseAPI}/update/${ user.id }/photo`, formData, { responseType: 'blob' });
 		}
 	}
 }

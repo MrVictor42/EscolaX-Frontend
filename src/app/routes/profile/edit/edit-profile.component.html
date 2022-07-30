@@ -1,4 +1,4 @@
-<form #loginForm="ngForm" (submit)="onSubmit(user)" class="m-16 form-field-full">
+<form #loginForm="ngForm" (submit)="onSubmit()" class="m-16 form-field-full">
     <div fxLayout="row wrap" fxLayoutGap="8px grid">
 
         <div fxFlex="50" fxFlex.lt-md="100">
@@ -23,19 +23,20 @@
                     placeholder="{{'login.name' | translate}}">
             </mat-form-field>
         </div>
-
         
         <div fxFlex="50" fxFlex.lt-md="100">
             <mat-form-field>
                 <mat-label>{{'login.permisson' | translate}}</mat-label>
-                <input matInput value="{{ user.roles }}" name="roles" [(ngModel)]="user.roles" disabled>
+                <input matInput value="{{ user.permission }}" name="permission" [(ngModel)]="user.permission" disabled>
             </mat-form-field>
         </div>
 
         <div fxFlex="50" fxFlex.lt-md="100">
             <mat-card>
-                <img mat-card-image *ngIf="isNull" [src]="urlAvatar" alt="avatar"/>
-                <img mat-card-image *ngIf="!isNull" [src]="urlAvatar" alt="avatar"/>
+                <img mat-card-image [src]="urlAvatar" alt="avatar"/>
+                <mat-card-content>
+                    <p fxLayoutAlign="center"> {{'profile.default.image' | translate}} </p>
+                  </mat-card-content>
             </mat-card>
         </div>
 

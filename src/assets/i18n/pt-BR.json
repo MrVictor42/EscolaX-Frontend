@@ -43,7 +43,8 @@
 		"reset-password": "Trocar Senha",
 		"informations": "Informações",
 		"informations_about" : "Informações Sobre",
-		"save": "Salvar"
+		"save": "Salvar",
+		"default.image": "Imagem Padrão"
 	},
 	"paginator": {
 		"items_per_page_label": "Items per page:",

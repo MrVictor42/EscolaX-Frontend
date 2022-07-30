@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from '../../../model/user.service';
 
-import { User } from '../../../core/authentication';
+import { User } from '../../../model/user';
 
 @Component({
 	selector: 'app-edit-profile',
@@ -12,8 +12,7 @@ import { User } from '../../../core/authentication';
 export class ProfileEditComponent implements OnInit {
 
 	@Input() user: User = new User();
-	urlAvatar: string = "../../../../assets/images/avatar.jpg";
-	isNull: boolean = false;
+	urlAvatar: string = "../../../assets/images/avatar.jpg";
 	eventSelected: any;
 
 	constructor(private userService: UserService, private snackbar: MatSnackBar) {
@@ -21,32 +20,24 @@ export class ProfileEditComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.user.avatar ? null : this.isNull = true;
+		
 	}
-
-	onSubmit(user: User) {
-
-		const objectUser : Object = {
-			id: user.id,
-			username: user.username,
-			password: user.password,
-			name : user.name,
-			email: user.email
-		}
+	
+	onSubmit() {
 
 		if (this.eventSelected != null) {
 			const formData: FormData = new FormData();
 			const target = this.eventSelected.target.files;
-			const avatar = target.item(0);
+			const photo = target.item(0);
 
-			formData.append('avatar', avatar);
+			formData.append('photo', photo);
 
-			this.userService.update(objectUser, formData).subscribe(response => {
-				this.snackbar.open("Informações Atualizadas Com Sucesso!", "");
+			this.userService.update(this.user, formData).subscribe(response => {
+				this.snackbar.open("Informações Atualizadas Com Sucesso!", "X");
 			});
 		} else {
-			this.userService.update(objectUser, undefined).subscribe(response => {
-				this.snackbar.open("Informações Atualizadas Com Sucesso!", "");
+			this.userService.update(this.user, undefined).subscribe(response => {
+				this.snackbar.open("Informações Atualizadas Com Sucesso!", "X");
 			});
 		}
 	}

@@ -17,7 +17,9 @@ export class UserPanelComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		this.user = this.authService.getAuthenticatedUser();
+		this.authService.getAuthenticatedUser().subscribe(response => {
+			this.user = response;
+		});
 	}
 
 	logout() {

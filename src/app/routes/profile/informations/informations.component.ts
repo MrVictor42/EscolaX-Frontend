@@ -16,6 +16,6 @@ export class ProfileInformationsComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-	
+
 	}
 }
