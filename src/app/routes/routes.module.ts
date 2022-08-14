@@ -4,12 +4,10 @@ import { RoutesRoutingModule } from './routes-routing.module';
 
 import { LoginComponent } from './session/login/login.component';
 import { HomeComponent } from './home/home.component';
-import { AlertComponent } from '../theme/alert/alert.component';
 
 const COMPONENTS: any[] = [
 	LoginComponent,
-	HomeComponent,
-	AlertComponent
+	HomeComponent
 ];
 const COMPONENTS_DYNAMIC: any[] = [];
 

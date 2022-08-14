@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { AlertService } from '../../../theme/alert/alert.service';
 import { User } from '../../../model/user';
 import { AbstractControl, FormBuilder, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { UserService } from 'src/app/model/user.service';
 
 @Component({
 	selector: 'app-reset-password',
@@ -19,7 +20,7 @@ export class ProfileResetPasswordComponent implements OnInit {
 		confirmPassword: ['', [Validators.required, Validators.minLength(6)]],
 	});
 
-	constructor(private fb: FormBuilder, private alertService: AlertService) {
+	constructor(private fb: FormBuilder, private alertService: AlertService, private userService : UserService) {
 
 	}
 
@@ -37,8 +38,16 @@ export class ProfileResetPasswordComponent implements OnInit {
 
 	onSubmit() : void {
 		this.isSubmitting = true;
+		this.alertService.clear();
 
-		console.log(this.password?.value, this.confirmPassword?.value)
-		
+		this.userService.changePassword(this.user, this.password?.value!!).subscribe(response => {
+			this.alertService.displaySuccess('Senha Alterada Com Sucesso');
+			this.isSubmitting = false;
+			this.loginForm.reset();
+		}, errorResponse => {
+			this.alertService.displayError('Aconteceu Algum Erro... Tente Novamente.');
+			this.isSubmitting = false;
+			this.loginForm.reset();
+		});
 	}
 }

@@ -21,6 +21,7 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
 import { DisableControlDirective } from './directives/disable-control.directive';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
 import { ToObservablePipe } from './pipes/to-observable.pipe';
+import { AlertComponent } from 'src/app/theme/alert/alert.component';
 
 const MODULES: any[] = [
 	MaterialModule,
@@ -40,7 +41,7 @@ const MODULES: any[] = [
 	ToastrModule,
 	TranslateModule
 ];
-const COMPONENTS: any[] = [BreadcrumbComponent, PageHeaderComponent, ErrorCodeComponent];
+const COMPONENTS: any[] = [BreadcrumbComponent, PageHeaderComponent, ErrorCodeComponent, AlertComponent];
 const COMPONENTS_DYNAMIC: any[] = [];
 const DIRECTIVES: any[] = [DisableControlDirective];
 const PIPES: any[] = [SafeUrlPipe, ToObservablePipe];

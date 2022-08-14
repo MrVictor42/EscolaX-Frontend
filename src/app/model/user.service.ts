@@ -16,17 +16,21 @@ export class UserService {
 
 	}
 
-	userList() : Observable<User[]> {
-		return this.http.get<User[]>(`${ this.userBaseAPI }/list`);
+	userList(): Observable<User[]> {
+		return this.http.get<User[]>(`${this.userBaseAPI}/list`);
 	}
 
-	update(user: User, formData : FormData | undefined): Observable<any> {
+	update(user: User, formData: FormData | undefined): Observable<any> {
 
-		if(formData == undefined) {
+		if (formData == undefined) {
 			return this.http.put(`${this.userBaseAPI}/update`, user);
 		} else {
 			this.http.put<User>(`${this.userBaseAPI}/update`, user);
-			return this.http.put(`${this.userBaseAPI}/update/${ user.id }/photo`, formData, { responseType: 'blob' });
+			return this.http.put(`${this.userBaseAPI}/update/${user.id}/photo`, formData, { responseType: 'blob' });
 		}
+	}
+
+	changePassword(user : User,password: string): Observable<User> {
+		return this.http.put(`${ this.userBaseAPI }/update/password/${ user.id }/new_password`, password);
 	}
 }
