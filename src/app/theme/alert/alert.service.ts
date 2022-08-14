@@ -44,4 +44,16 @@ export class AlertService {
 	clear(id = this.defaultId) {
 		this.subject.next(new Alert({ id }));
 	}
+
+	displayError(message: string) {
+		this.error(message,
+			{ autoClose: false }
+		);
+	}
+
+	displaySuccess(message: string) {
+		this.success(message,
+			{ autoClose: false }
+		);
+	}
 }

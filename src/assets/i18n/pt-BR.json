@@ -44,7 +44,12 @@
 		"informations": "Informações",
 		"informations_about" : "Informações Sobre",
 		"save": "Salvar",
-		"default.image": "Imagem Padrão"
+		"default.image": "Imagem Padrão",
+		"change_password": "Trocar a Senha",
+		"new_password" : "Nova Senha",
+		"confirm_password" : "Confirme Sua Senha",
+		"passwords_not_match" : "As Senhas Não Conferem",
+		"min_password" : "Coloque Pelo Menos 6 Caracteres"
 	},
 	"paginator": {
 		"items_per_page_label": "Items per page:",

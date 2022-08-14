@@ -12,7 +12,7 @@ import { AuthService } from '../../../core/authentication/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-	isSubmitting = false;
+	isSubmitting : Boolean = false;
 	school: string = "Escola X";
 	currentLanguage: string = "";
 
@@ -51,22 +51,10 @@ export class LoginComponent implements OnInit {
 		}, erroResponse => {
 			this.isSubmitting = false;
 			if (this.language.getCurrentLanguage() == "pt-BR") {
-				this.displayError("Usuário e/ou senha incorreto(s).");
+				this.alertService.displayError("Usuário e/ou senha incorreto(s).");
 			} else {
-				this.displayError("The username or password you entered is incorrect.");
+				this.alertService.displayError("The username or password you entered is incorrect.");
 			}
 		});
-	}
-
-	private displayError(message: string) {
-		this.alertService.error(message,
-			{ autoClose: false }
-		);
-	}
-
-	private displaySuccess(message: string) {
-		this.alertService.success(message,
-			{ autoClose: false }
-		);
 	}
 }
