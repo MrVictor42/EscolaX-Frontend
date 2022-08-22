@@ -1,14 +1,29 @@
 {
     "menu": [
         {
-            "route": "dashboard",
-            "name": "Dashboard",
+            "route": "/profile/overview",
+            "name": "Perfil",
             "type": "link",
-            "icon": "dashboard",
-            "badge": {
-                "color": "red-500",
-                "value": "5"
-            }
+            "icon": "person"
+        },
+        {
+            "name": "Usuários",
+            "type": "sub",
+            "icon": "people",
+            "children": [
+                {
+                    "route": "/user/new_user",
+                    "name": "Novo Usuário",
+                    "type": "link",
+                    "icon": "person_add"
+                },
+                {
+                    "route": "/user/user_list",
+                    "name": "Lista de Usuários",
+                    "type": "link",
+                    "icon": "group"
+                }
+            ]
         }
     ]
 }

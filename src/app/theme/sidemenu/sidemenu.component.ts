@@ -1,10 +1,7 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { MenuService } from 'src/app/core/bootstrap/menu.service';
 
-import { InMemoryDbService, RequestInfo, STATUS } from 'angular-in-memory-web-api';
-import { Observable, pipe } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
-import { find, map, switchMap } from 'rxjs/operators';
 
 @Component({
 	selector: 'app-sidemenu',

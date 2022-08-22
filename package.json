@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "build:starter": "gulp --gulpfile gulpfile.js"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +40,7 @@
     "@angular-devkit/build-angular": "^14.0.1",
     "@angular/cli": "~14.0.1",
     "@angular/compiler-cli": "^14.0.0",
-    "typescript": "~4.7.2"
+    "typescript": "~4.7.2",
+    "lint-staged": "^12.4.1"
   }
 }
