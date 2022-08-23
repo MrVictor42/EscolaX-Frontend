@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { MenuService } from 'src/app/core/bootstrap/menu.service';
+import { MenuService } from '../../core/bootstrap/menu.service';
 
 import { ajax } from 'rxjs/ajax';
 
@@ -23,6 +23,6 @@ export class SidemenuComponent implements OnInit {
 	ngOnInit(): void {
 		ajax('assets/data/menu.json').subscribe((response: any) => {
 			this.menu.set(response.response.menu)
-		})
+		});
 	}
 }

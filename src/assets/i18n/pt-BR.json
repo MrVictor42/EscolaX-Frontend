@@ -29,6 +29,7 @@
 		"email": "Email",
 		"name": "Nome",
 		"permisson": "Permissão",
+        "send": "Enviar",
 		"username.required": "Usuário Obrigatório",
 		"password.required": "Senha Obrigatória",
 		"avatar": "foto",

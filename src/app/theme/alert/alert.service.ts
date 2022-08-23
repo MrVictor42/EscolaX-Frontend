@@ -3,7 +3,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { filter } from 'rxjs/operators';
 
 import { Alert } from './alert';
-import { AlertSettings } from './alert-settings';
+import { AlertSettings } from './alert.settings';
 
 @Injectable({ providedIn: 'root' })
 

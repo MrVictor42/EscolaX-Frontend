@@ -20,9 +20,9 @@ export class ProfileEditComponent implements OnInit {
 	}
 
 	ngOnInit(): void {
-		
+
 	}
-	
+
 	onSubmit() {
 
 		if (this.eventSelected != null) {

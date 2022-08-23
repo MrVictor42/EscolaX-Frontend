@@ -6,8 +6,8 @@ import { AuthGuard } from '../core/authentication/auth.guard';
 import { AdminLayoutComponent } from '../theme/admin-layout/admin-layout.component';
 import { AuthLayoutComponent } from '../theme/auth-layout/auth-layout.component';
 import { HomeComponent } from './home/home.component';
-import { ResetPasswordComponent } from '../theme/reset-password/reset-password.component';
-import { LoginComponent } from './session/login/login.component';
+import { LoginComponent } from './sessions/login/login.component';
+import { ResetPasswordComponent } from './sessions/reset-password/reset-password.component';
 
 const routes: Routes = [
     {

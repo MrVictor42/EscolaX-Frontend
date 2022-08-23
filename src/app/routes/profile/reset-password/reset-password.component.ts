@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 
 import { AlertService } from '../../../theme/alert/alert.service';
 import { User } from '../../../model/user';
-import { AbstractControl, FormBuilder, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { UserService } from 'src/app/model/user.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class ProfileResetPasswordComponent implements OnInit {
 
 	@Input() user: User = new User();
 	isSubmitting: Boolean = false;
-	
+
 	loginForm = this.fb.group({
 		password: ['', [Validators.required, Validators.minLength(6)]],
 		confirmPassword: ['', [Validators.required, Validators.minLength(6)]],

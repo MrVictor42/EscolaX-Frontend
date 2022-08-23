@@ -1,21 +1,18 @@
 import { Component, Input, OnInit } from '@angular/core';
-
-import { User } from '../../../core/authentication';
+import { User } from '../../../model/user';
 
 @Component({
-	selector: 'app-informations',
-	templateUrl: './informations.component.html',
-	styleUrls: ['./informations.component.scss']
+    selector: 'app-informations',
+    templateUrl: './informations.component.html',
+    styleUrls: ['./informations.component.scss']
 })
 export class ProfileInformationsComponent implements OnInit {
 
 	@Input() user: User = new User();
 
-	constructor() {
-		
-	}
+    constructor() { }
 
-	ngOnInit(): void {
+    ngOnInit(): void {
 
-	}
+    }
 }

@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 
 import { Alert } from './alert';
 import { AlertService } from './alert.service';
-import { AlertSettings } from './alert-settings';
+import { AlertSettings } from './alert.settings';
 
 @Component({
 	selector: 'alert',

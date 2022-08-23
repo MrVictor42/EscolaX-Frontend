@@ -5,7 +5,7 @@ import { AuthService } from 'src/app/core/authentication';
 
 @Component({
 	selector: 'app-user-panel',
-	templateUrl: 'user-panel.component.html',
+	templateUrl: './user-panel.component.html',
 	styleUrls: ['./user-panel.component.scss'],
 })
 export class UserPanelComponent implements OnInit {

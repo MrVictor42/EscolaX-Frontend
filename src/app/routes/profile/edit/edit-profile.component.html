@@ -23,7 +23,7 @@
                     placeholder="{{'login.name' | translate}}">
             </mat-form-field>
         </div>
-        
+
         <div fxFlex="50" fxFlex.lt-md="100">
             <mat-form-field>
                 <mat-label>{{'login.permisson' | translate}}</mat-label>
@@ -33,15 +33,15 @@
 
         <div fxFlex="50" fxFlex.lt-md="100">
             <mat-card>
-                <img mat-card-image [src]="urlAvatar" alt="avatar"/>
+                <img mat-card-image [src]="urlAvatar" alt="avatar" />
                 <mat-card-content>
                     <p fxLayoutAlign="center"> {{'profile.default.image' | translate}} </p>
-                  </mat-card-content>
+                </mat-card-content>
             </mat-card>
         </div>
 
         <div fxFlex="50" fxFlex.lt-md="100">
-            <input type="file" class="update-photo" (change)="changePhoto($event)" name="avatar" accept="image/*"/>
+            <input type="file" class="update-photo" (change)="changePhoto($event)" name="avatar" accept="image/*" />
         </div>
 
         <div fxLayout="row" fxLayoutAlign="end center">

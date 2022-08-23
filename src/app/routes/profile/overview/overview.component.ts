@@ -8,7 +8,7 @@ import { User } from '../../../core/authentication';
 	styleUrls: ['./overview.component.scss']
 })
 export class ProfileOverviewComponent implements OnInit {
-	
+
 	user: User = new User();
 
 	constructor(private authService: AuthService) {

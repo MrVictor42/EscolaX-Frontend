@@ -79,7 +79,6 @@ export class AdminLayoutComponent implements OnInit {
 		this.layoutChangesSubscription = this.breakpointObserver
 			.observe([MOBILE_MEDIAQUERY, TABLET_MEDIAQUERY, MONITOR_MEDIAQUERY])
 			.subscribe(state => {
-				// SidenavOpened must be reset true when layout changes
 				this.options.sidenavOpened = true;
 
 				this.isMobileScreen = state.breakpoints[MOBILE_MEDIAQUERY];
@@ -95,17 +94,13 @@ export class AdminLayoutComponent implements OnInit {
 			this.content.scrollTo({ top: 0 });
 		});
 
-		// Check whether the browser support `prefers-color-scheme`
 		if (this.mediaMatcher.matchMedia('(prefers-color-scheme)').media !== 'not all') {
 			const isSystemDark = this.mediaMatcher.matchMedia('(prefers-color-scheme: dark)').matches;
-			// Set theme to dark if `prefers-color-scheme` is dark. Otherwise, set it to light.
 			this.options.theme = isSystemDark ? 'dark' : 'light';
 		} else {
-			// If the browser does not support `prefers-color-scheme`, set the default to dark.
-			this.options.theme = 'light';
+			this.options.theme = 'dark';
 		}
 
-		// Initialize project theme with options
 		this.receiveOptions(this.options);
 	}
 
@@ -119,7 +114,6 @@ export class AdminLayoutComponent implements OnInit {
 		this.resetCollapsedState();
 	}
 
-	// TODO: Trigger when transition end
 	resetCollapsedState(timer = 400) {
 		setTimeout(() => this.settings.setOptions(this.options), timer);
 	}
@@ -133,8 +127,6 @@ export class AdminLayoutComponent implements OnInit {
 		this.options.sidenavOpened = isOpened;
 		this.settings.setOptions(this.options);
 	}
-
-	// Demo purposes only
 
 	receiveOptions(options: AppSettings): void {
 		this.options = options;

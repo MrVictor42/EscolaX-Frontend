@@ -1,23 +1,16 @@
-import { Component, OnInit, Output, EventEmitter, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Output, EventEmitter, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
-	selector: 'app-sidebar',
-	templateUrl: './sidebar.component.html',
-	styleUrls: ['./sidebar.component.scss'],
-	encapsulation: ViewEncapsulation.None
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
+  @Input() showToggle = true;
+  @Input() showUser = true;
+  @Input() showHeader = true;
+  @Input() toggleChecked = false;
 
-	constructor() { }
-
-	ngOnInit(): void {
-
-	}
-
-	@Input() showToggle = true;
-	@Input() showUser = true;
-	@Input() showHeader = true;
-	@Input() toggleChecked = false;
-
-	@Output() toggleCollapsed = new EventEmitter<void>();
+  @Output() toggleCollapsed = new EventEmitter<void>();
 }

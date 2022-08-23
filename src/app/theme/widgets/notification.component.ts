@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 			<mat-icon>notifications</mat-icon>
 			<span class="badge bg-red-500">5</span>
 		</button>
-
 		<mat-menu #menu="matMenu">
 			<mat-nav-list>
 				<mat-list-item *ngFor="let message of messages">

@@ -9,17 +9,17 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import {
-	DateAdapter,
-	MatNativeDateModule,
-	MatRippleModule,
-	MAT_DATE_FORMATS,
-	MAT_DATE_LOCALE,
+  DateAdapter,
+  MatNativeDateModule,
+  MatRippleModule,
+  MAT_DATE_FORMATS,
+  MAT_DATE_LOCALE,
 } from '@angular/material/core';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import {
-	MatDialogConfig,
-	MatDialogModule,
-	MAT_DIALOG_DEFAULT_OPTIONS,
+  MatDialogConfig,
+  MatDialogModule,
+  MAT_DIALOG_DEFAULT_OPTIONS,
 } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule } from '@angular/material/expansion';
@@ -45,93 +45,86 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
-import { FormsModule } from '@angular/forms';
 import { MatMomentDateModule, MomentDateAdapter } from '@angular/material-moment-adapter';
 
-import { PaginatorI18nService } from './core/shared/services/paginator-i18n.service';
-
-const MaterialComponents = [
-	MatAutocompleteModule,
-	MatBadgeModule,
-	MatBottomSheetModule,
-	MatButtonModule,
-	MatButtonToggleModule,
-	MatCardModule,
-	MatCheckboxModule,
-	MatChipsModule,
-	MatStepperModule,
-	MatDatepickerModule,
-	MatMomentDateModule,
-	MatDialogModule,
-	MatDividerModule,
-	MatExpansionModule,
-	MatFormFieldModule,
-	MatGridListModule,
-	MatIconModule,
-	MatInputModule,
-	MatListModule,
-	MatMenuModule,
-	MatNativeDateModule,
-	MatPaginatorModule,
-	MatProgressBarModule,
-	MatProgressSpinnerModule,
-	MatRadioModule,
-	MatRippleModule,
-	MatSelectModule,
-	MatSidenavModule,
-	MatSliderModule,
-	MatSlideToggleModule,
-	MatSnackBarModule,
-	MatSortModule,
-	MatTableModule,
-	MatTabsModule,
-	MatToolbarModule,
-	MatTooltipModule,
-	MatTreeModule,
-	FormsModule
-];
+import { PaginatorI18nService } from '../app/shared/services/paginator-i18n.service';
 
 @NgModule({
-	declarations: [],
-	imports: [MaterialComponents],
-	exports: [MaterialComponents],
-	providers: [
-		{
-			provide: MatPaginatorIntl,
-			deps: [PaginatorI18nService],
-			useFactory: (paginatorI18nSrv: PaginatorI18nService) => paginatorI18nSrv.getPaginatorIntl(),
-		},
-		{
-			provide: MAT_DIALOG_DEFAULT_OPTIONS,
-			useValue: {
-				...new MatDialogConfig(),
-			},
-		},
-		{
-			provide: MAT_DATE_LOCALE,
-			useFactory: () => navigator.language,
-		},
-		{
-			provide: DateAdapter,
-			useClass: MomentDateAdapter,
-			deps: [MAT_DATE_LOCALE],
-		},
-		{
-			provide: MAT_DATE_FORMATS,
-			useValue: {
-				parse: {
-					dateInput: 'YYYY-MM-DD',
-				},
-				display: {
-					dateInput: 'YYYY-MM-DD',
-					monthYearLabel: 'YYYY MMM',
-					dateA11yLabel: 'LL',
-					monthYearA11yLabel: 'YYYY MMM',
-				},
-			},
-		}
-	]
+  exports: [
+    MatAutocompleteModule,
+    MatBadgeModule,
+    MatBottomSheetModule,
+    MatButtonModule,
+    MatButtonToggleModule,
+    MatCardModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatStepperModule,
+    MatDatepickerModule,
+    MatMomentDateModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatGridListModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatNativeDateModule,
+    MatPaginatorModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatRadioModule,
+    MatRippleModule,
+    MatSelectModule,
+    MatSidenavModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatToolbarModule,
+    MatTooltipModule,
+    MatTreeModule,
+  ],
+  providers: [
+    {
+      provide: MatPaginatorIntl,
+      deps: [PaginatorI18nService],
+      useFactory: (paginatorI18nSrv: PaginatorI18nService) => paginatorI18nSrv.getPaginatorIntl(),
+    },
+    {
+      provide: MAT_DIALOG_DEFAULT_OPTIONS,
+      useValue: {
+        ...new MatDialogConfig(),
+      },
+    },
+    // This will be overrided by runtime setting
+    {
+      provide: MAT_DATE_LOCALE,
+      useFactory: () => navigator.language,
+    },
+    {
+      provide: DateAdapter,
+      useClass: MomentDateAdapter,
+      deps: [MAT_DATE_LOCALE],
+    },
+    {
+      provide: MAT_DATE_FORMATS,
+      useValue: {
+        parse: {
+          dateInput: 'YYYY-MM-DD',
+        },
+        display: {
+          dateInput: 'YYYY-MM-DD',
+          monthYearLabel: 'YYYY MMM',
+          dateA11yLabel: 'LL',
+          monthYearA11yLabel: 'YYYY MMM',
+        },
+      },
+    },
+  ],
 })
-export class MaterialModule {
-
-}
+export class MaterialModule {}

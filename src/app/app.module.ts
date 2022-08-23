@@ -6,9 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
 import { CoreModule } from '../app/core/core.module';
-import { TemplateModule } from './theme/template.module';
-import { SharedModule } from './core/shared/shared.module';
-import { RoutesModule } from './routes/routes.module';
+import { TemplateModule } from '../app/theme/theme.module';
+import { SharedModule } from '../app/shared/shared.module';
+import { RoutesModule } from '../app/routes/routes.module';
 import { NgxPermissionsModule } from 'ngx-permissions';
 import { ToastrModule } from 'ngx-toastr';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
@@ -16,8 +16,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { appInitializerProviders } from '../app/core/initializers';
 
-import { TokenInterceptor } from './core/authentication/token.interceptor';
-import { AuthService } from './core/authentication/auth.service';
+import { TokenInterceptor } from '../app/core/authentication/token.interceptor';
+import { AuthService } from '../app/core/authentication/auth.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 export function TranslateHttpLoaderFactory(http: HttpClient) {
