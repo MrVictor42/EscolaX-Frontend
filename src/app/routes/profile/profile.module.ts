@@ -6,6 +6,7 @@ import { ProfileOverviewComponent } from './overview/overview.component';
 import { ProfileResetPasswordComponent } from './reset-password/reset-password.component';
 import { ProfileInformationsComponent } from './informations/informations.component';
 import { ProfileEditComponent } from './edit/edit-profile.component';
+import { PhotoEditComponent } from './photo-edit/photo-edit.component';
 
 const COMPONENTS: any[] = [
 	ProfileLayoutComponent,
@@ -18,7 +19,7 @@ const COMPONENTS_DYNAMIC: any[] = [];
 
 @NgModule({
 	imports: [SharedModule, ProfileRoutingModule],
-	declarations: [...COMPONENTS, ...COMPONENTS_DYNAMIC]
+	declarations: [...COMPONENTS, ...COMPONENTS_DYNAMIC, PhotoEditComponent]
 })
 
 export class ProfileModule {

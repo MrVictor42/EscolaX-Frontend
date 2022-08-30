@@ -25,7 +25,6 @@ export class UserService {
 		if (formData == undefined) {
 			return this.http.put(`${this.userBaseAPI}/update`, user);
 		} else {
-			this.http.put<User>(`${this.userBaseAPI}/update`, user);
 			return this.http.put(`${this.userBaseAPI}/update/${user.id}/photo`, formData, { responseType: 'blob' });
 		}
 	}

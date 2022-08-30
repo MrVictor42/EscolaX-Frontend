@@ -11,6 +11,8 @@ import { AuthService } from 'src/app/core/authentication';
 export class UserPanelComponent implements OnInit {
 
 	user: User = new User();
+    urlAvatar: string = "../../../assets/images/avatar.jpg";
+	eventSelected: any;
 
 	constructor(private authService : AuthService, private router: Router) {
 

@@ -16,10 +16,17 @@
         </mat-tab>
         <mat-tab>
             <ng-template mat-tab-label>
-                <mat-icon>key</mat-icon>
+                <mat-icon>vpn_key</mat-icon>
                 {{'profile.reset-password' | translate}}
             </ng-template>
             <app-reset-password [user]="user"></app-reset-password>
+        </mat-tab>
+        <mat-tab>
+            <ng-template mat-tab-label>
+                <mat-icon>person</mat-icon>
+                {{'profile.change_image_profile' | translate}}
+            </ng-template>
+            <app-photo-edit [user]="user"></app-photo-edit>
         </mat-tab>
     </mat-tab-group>
 </mat-card>
