@@ -13,13 +13,14 @@ const COMPONENTS: any[] = [
 	ProfileOverviewComponent,
 	ProfileResetPasswordComponent,
 	ProfileInformationsComponent,
-	ProfileEditComponent
+	ProfileEditComponent,
+    PhotoEditComponent
 ];
 const COMPONENTS_DYNAMIC: any[] = [];
 
 @NgModule({
 	imports: [SharedModule, ProfileRoutingModule],
-	declarations: [...COMPONENTS, ...COMPONENTS_DYNAMIC, PhotoEditComponent]
+	declarations: [...COMPONENTS, ...COMPONENTS_DYNAMIC]
 })
 
 export class ProfileModule {

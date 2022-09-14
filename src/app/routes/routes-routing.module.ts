@@ -21,6 +21,14 @@ const routes: Routes = [
             {
                 path: 'profile',
                 loadChildren: () => import('./profile/profile.module').then(module => module.ProfileModule)
+            },
+            {
+                path: 'student',
+                loadChildren: () => import('./students/student.module').then(module => module.StudentModule)
+            },
+            {
+                path: 'gang',
+                loadChildren: () => import('./gang/gang.module').then(module => module.GangModule)
             }
         ]
     },
