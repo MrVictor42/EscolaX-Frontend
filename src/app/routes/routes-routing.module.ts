@@ -27,8 +27,8 @@ const routes: Routes = [
                 loadChildren: () => import('./students/student.module').then(module => module.StudentModule)
             },
             {
-                path: 'gang',
-                loadChildren: () => import('./gang/gang.module').then(module => module.GangModule)
+                path: 'classroom',
+                loadChildren: () => import('./classroom/classroom.module').then(module => module.ClassroomModule)
             }
         ]
     },

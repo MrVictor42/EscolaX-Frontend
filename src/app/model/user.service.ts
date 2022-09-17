@@ -25,11 +25,11 @@ export class UserService {
 		if (formData == undefined) {
 			return this.http.put(`${this.userBaseAPI}/update`, user);
 		} else {
-			return this.http.put(`${this.userBaseAPI}/update/${user.id}/photo`, formData, { responseType: 'blob' });
+			return this.http.put(`${this.userBaseAPI}/update/${user.registration}/photo`, formData, { responseType: 'blob' });
 		}
 	}
 
 	changePassword(user : User,password: string): Observable<User> {
-		return this.http.put(`${ this.userBaseAPI }/update/password/${ user.id }/new_password`, password);
+		return this.http.put(`${ this.userBaseAPI }/update/password/${ user.registration }/new_password`, password);
 	}
 }

@@ -35,11 +35,6 @@ export class PhotoEditComponent implements OnInit {
 				this.snackbar.open("Informações Atualizadas Com Sucesso!", "X");
                 window.location.reload();
 			});
-		} else {
-			this.userService.update(this.user, undefined).subscribe(response => {
-				this.snackbar.open("Informações Atualizadas Com Sucesso!", "X");
-                window.location.reload();
-			});
 		}
     }
 

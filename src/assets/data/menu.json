@@ -21,13 +21,13 @@
             ]
         },
         {
-            "route": "gang/",
+            "route": "classroom/",
             "name": "Turma",
             "type": "sub",
             "icon": "group",
             "children": [
                 {
-                    "route": "new_gang",
+                    "route": "new_classroom",
                     "name": "Nova Turma",
                     "icon":"add",
                     "type": "link"
