@@ -22,9 +22,9 @@
         },
         {
             "route": "classroom/",
-            "name": "Turma",
+            "name": "Turmas",
             "type": "sub",
-            "icon": "group",
+            "icon": "assignment_ind",
             "children": [
                 {
                     "route": "new_classroom",

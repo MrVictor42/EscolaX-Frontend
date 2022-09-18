@@ -1,17 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ProfileLayoutComponent } from './layout/layout.component';
 import { ProfileOverviewComponent } from './overview/overview.component';
 
 const routes: Routes = [
-	{
-		path: '', component: ProfileLayoutComponent,
-		children: [
-			{ path: '', redirectTo: '', pathMatch: 'full' },
-			{ path: 'overview', component: ProfileOverviewComponent }
-		]
-	}
+    { path: 'overview', component: ProfileOverviewComponent }
 ];
 
 @NgModule({

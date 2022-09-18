@@ -22,7 +22,7 @@ export class SidemenuComponent implements OnInit {
 
 	ngOnInit(): void {
 		ajax('assets/data/menu.json').subscribe((response: any) => {
-			this.menu.set(response.response.menu)
+			this.menu$ = this.menu.set(response.response.menu)
 		});
 	}
 }

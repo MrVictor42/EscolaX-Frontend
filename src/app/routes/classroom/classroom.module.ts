@@ -4,7 +4,7 @@ import { ClassroomRoutingModule } from './classroom-routing.module';
 import { NewClassroomComponent } from './new-classroom/new-classroom.component';
 
 const COMPONENTS: any[] = [
-    NewClassroomComponent
+    NewClassroomComponent,
 ];
 const COMPONENTS_DYNAMIC: any[] = [];
 
