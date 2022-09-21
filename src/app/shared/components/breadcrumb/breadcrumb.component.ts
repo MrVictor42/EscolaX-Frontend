@@ -10,6 +10,7 @@ import { MenuService } from '../../../core/bootstrap/menu.service';
 })
 export class BreadcrumbComponent implements OnInit {
     @Input() nav: string[] = [];
+    private listRoutes: string[] = [];
 
     constructor(private router: Router, private menu: MenuService) { }
 
@@ -27,7 +28,15 @@ export class BreadcrumbComponent implements OnInit {
 
     genBreadcrumb() {
         const routes = this.router.url.slice(1).split('/');
-        this.nav = this.menu.getLevel(routes);
+        routes.forEach(item => {
+            if (item.toString().includes('_')) {
+                item = item.toString().replace('_', ' ')
+                this.listRoutes.push(item);
+            } else {
+                this.listRoutes.push(item);
+            }
+        })
+        this.nav = this.listRoutes;
         this.nav.unshift('home');
     }
 }

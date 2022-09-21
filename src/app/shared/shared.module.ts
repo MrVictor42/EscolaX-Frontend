@@ -17,13 +17,14 @@ import { NgxPermissionsModule } from 'ngx-permissions';
 import { ToastrModule } from 'ngx-toastr';
 import { TranslateModule } from '@ngx-translate/core';
 
+import { AlertComponent } from '../theme/alert/alert.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { ErrorCodeComponent } from './components/error-code/error-code.component';
+
 import { DisableControlDirective } from './directives/disable-control.directive';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
 import { ToObservablePipe } from './pipes/to-observable.pipe';
-import { AlertComponent } from '../theme/alert/alert.component';
 
 const MODULES: any[] = [
     CommonModule,
@@ -41,7 +42,7 @@ const MODULES: any[] = [
     NgProgressHttpModule,
     NgxPermissionsModule,
     ToastrModule,
-    TranslateModule
+    TranslateModule,
 ];
 const COMPONENTS: any[] = [BreadcrumbComponent, PageHeaderComponent, ErrorCodeComponent, AlertComponent];
 const COMPONENTS_DYNAMIC: any[] = [];

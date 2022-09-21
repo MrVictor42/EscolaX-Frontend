@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './sessions/login/login.component';
 import { ResetPasswordComponent } from './sessions/reset-password/reset-password.component';
 
+const BREAD_CRUMB_CART_KEY = 'BREAD_CRUMB_CART';
+
 const routes: Routes = [
     {
         path: '',
@@ -17,7 +19,7 @@ const routes: Routes = [
         canActivateChild: [AuthGuard],
         children: [
             { path: '', redirectTo: 'home', pathMatch: 'full' },
-            { path: 'home', component: HomeComponent },
+            { path: 'home', component: HomeComponent, data: { title: 'Home' } },
             {
                 path: 'profile',
                 loadChildren: () => import('./profile/profile.module').then(module => module.ProfileModule)
@@ -28,6 +30,7 @@ const routes: Routes = [
             },
             {
                 path: 'classroom',
+                data: { breadcrumb: { skip: true } },
                 loadChildren: () => import('./classroom/classroom.module').then(module => module.ClassroomModule)
             }
         ]

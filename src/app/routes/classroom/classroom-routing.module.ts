@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NewClassroomComponent } from './new-classroom/new-classroom.component';
 
 const routes: Routes = [
-    { path: 'new_classroom', component: NewClassroomComponent }
+    { path: 'new_classroom', component: NewClassroomComponent, data: { title: 'New Classroom' } }
 ];
 
 @NgModule({
