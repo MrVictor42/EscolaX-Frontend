@@ -21,6 +21,20 @@
             ]
         },
         {
+            "route": "teacher/",
+            "name": "Professor",
+            "type": "sub",
+            "icon": "groups",
+            "children": [
+                {
+                    "route": "new_teacher",
+                    "name": "Novo Professor",
+                    "icon":"add",
+                    "type": "link"
+                }
+            ]
+        },
+        {
             "route": "classroom/",
             "name": "Turmas",
             "type": "sub",

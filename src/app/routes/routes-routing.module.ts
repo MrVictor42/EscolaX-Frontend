@@ -9,8 +9,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './sessions/login/login.component';
 import { ResetPasswordComponent } from './sessions/reset-password/reset-password.component';
 
-const BREAD_CRUMB_CART_KEY = 'BREAD_CRUMB_CART';
-
 const routes: Routes = [
     {
         path: '',
@@ -32,6 +30,11 @@ const routes: Routes = [
                 path: 'classroom',
                 data: { breadcrumb: { skip: true } },
                 loadChildren: () => import('./classroom/classroom.module').then(module => module.ClassroomModule)
+            },
+            {
+                path: 'teacher',
+                data: { breadcrumb: { skip: true } },
+                loadChildren: () => import('./teacher/teacher.module').then(module => module.TeacherModule)
             }
         ]
     },
