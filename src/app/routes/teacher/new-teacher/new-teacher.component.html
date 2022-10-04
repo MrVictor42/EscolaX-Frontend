@@ -1,1 +1,50 @@
-<p>new-teacher works!</p>
+<page-header [title]="title"></page-header>
+<mat-card>
+    <mat-card-title>{{'teacher.title' | translate}}</mat-card-title>
+    <div class="w-full">
+        <alert></alert>
+    </div>
+    <form #teacherForm="ngForm" (submit)="onSubmit()" class="m-16 form-field-full">
+        <div fxLayout="row" fxLayoutGap="8px grid">
+            <div fxFlex="50" fxFlex.lt-md="100">
+                <mat-form-field class="col-sm-11">
+                    <mat-label>{{'teacher.name' | translate}}</mat-label>
+                    <input matInput value="{{ teacher.name }}" name="name" [(ngModel)]="teacher.name" required="true" maxlength="50">
+                </mat-form-field>
+            </div>
+            <div fxFlex="50" fxFlex.lt-md="100">
+                <mat-form-field class="col-sm-8">
+                    <mat-label>{{'teacher.username' | translate}}</mat-label>
+                    <input matInput value="{{ teacher.username }}" name="username" [(ngModel)]="teacher.username" required="true" maxlength="50">
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="8px grid">
+            <div fxFlex="50" fxFlex.lt-md="100">
+                <mat-form-field class="col-sm-11">
+                    <mat-label>{{'teacher.email' | translate}}</mat-label>
+                    <input matInput value="{{ teacher.email }}" name="email" [(ngModel)]="teacher.email" required="true" maxlength="50">
+                </mat-form-field>
+            </div>
+            <div fxFlex="50" fxFlex.lt-md="100">
+                <mat-form-field class="col-sm-8">
+                    <mat-label>{{'teacher.phone' | translate}}</mat-label>
+                    <input matInput value="{{ teacher.phone | phone }}" name="phone" [(ngModel)]="teacher.phone" mask="(00) 00000-0000" required="true">
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="8px grid">
+            <div fxFlex="50" fxFlex.lt-md="100">
+                <mat-form-field class="col-sm-8">
+                    <mat-label>{{'teacher.registry' | translate}}</mat-label>
+                    <input matInput value="{{ teacher.registration }}" name="registry" [(ngModel)]="teacher.registry" required="true" maxlength="15">
+                </mat-form-field>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start center">
+            <button mat-raised-button color="primary" class="m-t-8">
+                {{'teacher.save' | translate}}
+            </button>
+        </div>
+    </form>
+</mat-card>

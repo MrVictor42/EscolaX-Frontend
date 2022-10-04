@@ -1,46 +1,57 @@
 {
-	"menu": {
+    "menu": {
         "home": "Início"
-	},
-	"user": {
-		"profile": "Perfil",
-		"settings": "Configurações",
-		"logout": "Sair"
-	},
-	"back" : "Cancelar",
-	"password": {
-		"reset" : "Recuperação de Senha",
+    },
+    "user": {
+        "profile": "Perfil",
+        "settings": "Configurações",
+        "logout": "Sair"
+    },
+    "back": "Cancelar",
+    "password": {
+        "reset": "Recuperação de Senha",
         "subtitle": "Insira Seu Username Para Procurar Sua Conta."
-	},
-	"login": {
-		"title": "Bem vindo a ",
-		"username": "Usuário",
-		"password": "Senha",
-		"email": "Email",
-		"name": "Nome",
-		"permisson": "Permissão",
+    },
+    "login": {
+        "title": "Bem vindo a ",
+        "username": "Usuário",
+        "password": "Senha",
+        "email": "Email",
+        "name": "Nome",
+        "permisson": "Permissão",
         "send": "Enviar",
-		"username.required": "Usuário Obrigatório",
-		"password.required": "Senha Obrigatória",
-		"avatar": "foto",
-		"login": "Login",
-		"forget_password": "Esqueceu Sua Senha?",
-		"change_password": "Clique Aqui Para Trocar!"
-	},
-	"profile": {
-		"title" : "Perfil",
-		"overview": "Resumo",
-		"edit": "Editar Perfil",
-		"reset-password": "Trocar Senha",
-		"informations": "Informações",
-		"informations_about" : "Informações Sobre",
-		"save": "Salvar",
-		"default.image": "Imagem Padrão",
-		"change_password": "Trocar a Senha",
-		"new_password" : "Nova Senha",
-		"confirm_password" : "Confirme Sua Senha",
-		"passwords_not_match" : "As Senhas Não Conferem",
-		"min_password" : "Coloque Pelo Menos 6 Caracteres",
-		"change_image_profile": "Trocar a Imagem de Perfil"
-	}
+        "username.required": "Usuário Obrigatório",
+        "password.required": "Senha Obrigatória",
+        "avatar": "foto",
+        "login": "Login",
+        "forget_password": "Esqueceu Sua Senha?",
+        "change_password": "Clique Aqui Para Trocar!"
+    },
+    "profile": {
+        "title": "Perfil",
+        "overview": "Resumo",
+        "edit": "Editar Perfil",
+        "reset-password": "Trocar Senha",
+        "informations": "Informações",
+        "informations_about": "Informações Sobre",
+        "save": "Salvar",
+        "default.image": "Imagem Padrão",
+        "change_password": "Trocar a Senha",
+        "new_password": "Nova Senha",
+        "confirm_password": "Confirme Sua Senha",
+        "passwords_not_match": "As Senhas Não Conferem",
+        "min_password": "Coloque Pelo Menos 6 Caracteres",
+        "change_image_profile": "Trocar a Imagem de Perfil"
+    },
+    "teacher": {
+        "title": "Formulário Para O Novo Professor",
+        "name": "Nome Completo",
+        "email": "Email",
+        "registry" : "Número de Matrícula",
+        "username" : "Nome de Usuário",
+        "password" : "Senha",
+        "confirm_password": "Confirme Sua Senha",
+        "phone" : "Telefone",
+        "save" : "Salvar"
+    }
 }

@@ -21,6 +21,7 @@ import { AlertComponent } from '../theme/alert/alert.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
 import { ErrorCodeComponent } from './components/error-code/error-code.component';
+import { PhonePipe } from './components/phone-pipe/phone.pipe';
 
 import { DisableControlDirective } from './directives/disable-control.directive';
 import { SafeUrlPipe } from './pipes/safe-url.pipe';
@@ -42,9 +43,9 @@ const MODULES: any[] = [
     NgProgressHttpModule,
     NgxPermissionsModule,
     ToastrModule,
-    TranslateModule,
+    TranslateModule
 ];
-const COMPONENTS: any[] = [BreadcrumbComponent, PageHeaderComponent, ErrorCodeComponent, AlertComponent];
+const COMPONENTS: any[] = [BreadcrumbComponent, PageHeaderComponent, ErrorCodeComponent, AlertComponent, PhonePipe];
 const COMPONENTS_DYNAMIC: any[] = [];
 const DIRECTIVES: any[] = [DisableControlDirective];
 const PIPES: any[] = [SafeUrlPipe, ToObservablePipe];

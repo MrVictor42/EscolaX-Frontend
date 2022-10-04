@@ -24,7 +24,7 @@
             "route": "teacher/",
             "name": "Professor",
             "type": "sub",
-            "icon": "groups",
+            "icon": "person_outline",
             "children": [
                 {
                     "route": "new_teacher",
